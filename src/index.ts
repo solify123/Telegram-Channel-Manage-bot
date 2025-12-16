@@ -4,15 +4,10 @@ import axios from "axios";
 dotenv.config();
 const BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN as string;
 
-
 const AD_POSTER_USER_ID = process.env.AD_POSTER_USER_ID
 
-console.log('AD_POSTER_USER_ID', AD_POSTER_USER_ID);
 // @ts-ignore
 const AD_DELETE_DELAY_MS = process.env.AD_DELETE_DELAY_MS * 60 * 1000;
-
-
-console.log('AD_DELETE_DELAY_MS', AD_DELETE_DELAY_MS);
 
 const bot = new TelegramBot(BOT_TOKEN, {
   polling: true
