@@ -149,8 +149,7 @@ function createControlPanel(userId?: number, username?: string): TelegramBot.Inl
   ];
   
   const isAdmin  = AD_POSTER_USER_ID;
-  console.log('isAdmin', isAdmin);
-  if (isAdmin) {
+  if (isAdmin == username) {
     buttons.push([
       { text: '📢 Post AD', callback_data: 'post_ad' }
     ]);
